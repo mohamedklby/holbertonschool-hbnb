@@ -3,30 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Lieux</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>HBNB - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
 </head>
 <body>
     <header>
-        <img src="../assets/images/logo.png" alt="Logo" class="logo">
+        <div class="logo">
+            <img src="images/logo.png" alt="HBNB Logo">
+        </div>
         <nav>
-            <a href="login.html" class="login-button">Se connecter</a>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="login.html" id="login-link">Connexion</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Lieux</h1>
-        <div id="places-list">
-            <!-- Les lieux seront affichés ici dynamiquement -->
-        </div>
+        <section class="filters">
+            <h2>Filtres</h2>
+            <div class="filter-group">
+                <label for="price-filter">Prix maximum par nuit:</label>
+                <select id="price-filter">
+                    <option value="all">Tous</option>
+                    <option value="10">10€</option>
+                    <option value="50">50€</option>
+                    <option value="100">100€</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="places-list">
+            <div class="place-card">
+                <div class="place-image">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Appartement Vue Mer">
+                </div>
+                <h3>Appartement Vue Mer</h3>
+                <p>Magnifique appartement avec vue panoramique sur la mer. Proche des commerces et des transports.</p>
+                <p>Prix par nuit: 120€</p>
+                <a href="place.html?id=1" class="details-button">Voir les détails</a>
+            </div>
+
+            <div class="place-card">
+                <div class="place-image">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af" alt="Studio Moderne Centre-Ville">
+                </div>
+                <h3>Studio Moderne Centre-Ville</h3>
+                <p>Studio entièrement rénové au cœur de la ville. Idéal pour les séjours courts.</p>
+                <p>Prix par nuit: 85€</p>
+                <a href="place.html?id=2" class="details-button">Voir les détails</a>
+            </div>
+
+            <div class="place-card">
+                <div class="place-image">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750" alt="Maison de Campagne">
+                </div>
+                <h3>Maison de Campagne</h3>
+                <p>Charmante maison traditionnelle entourée de nature. Parfaite pour les familles et les amis.</p>
+                <p>Prix par nuit: 150€</p>
+                <a href="place.html?id=3" class="details-button">Voir les détails</a>
+            </div>
+
+            <div class="place-card">
+                <div class="place-image">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Loft Industriel">
+                </div>
+                <h3>Loft Industriel</h3>
+                <p>Espace de vie moderne dans un ancien entrepôt rénové. Style industriel et confortable.</p>
+                <p>Prix par nuit: 110€</p>
+                <a href="place.html?id=4" class="details-button">Voir les détails</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Tous droits réservés</p>
+        <p>HBNB &copy; 2024 - Tous droits réservés</p>
     </footer>
 
-    <script src="../js/places.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="scripts.js"></script>
 </body>
-</html>
-
+</html> 
